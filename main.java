@@ -3,9 +3,8 @@
  * John-George Sample
  * 
  */
-
-
 import java.util.Scanner;
+import java.util.Arrays;
 public class main 
 {
 
@@ -25,10 +24,6 @@ public class main
 			System.out.println("enter for Line "+(j+1));
 			input = scanner.nextLine();
 		}
-		
-		
-		
-		
 	}
 
 }
