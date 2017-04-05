@@ -19,7 +19,7 @@ public class Board {
 	}
 	
 	public void loadBoard(int a, int row, int col) {
-		myBoard [row][col] = a;
+		myBoard[row][col] = a;
 	}
 	
 }

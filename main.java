@@ -15,12 +15,12 @@ public class main
 		String input = "";
 		char holdChar;
 		System.out.println("Please enter values for the starting positions:");
-		for(int i=0;i<6;i++)
+		for(int i=0;i<6;i++) //col
 		{
 			System.out.println("Enter for line "+(i+1));
 			input = scanner.nextLine();
 			
-			for(int j=0;j<input.length();j++)
+			for(int j=0;j<input.length();j++) //row
 			{
 				holdChar = input.charAt(j);
 				//i is col
@@ -45,7 +45,7 @@ public class main
 			
 		}
 		
-		for(int k=0;k<6;k++)
+		for(int k=0;k<6;k++) //board 2
 		{
 			System.out.println("Enter for Line "+(k+1));
 			input = scanner.nextLine();
