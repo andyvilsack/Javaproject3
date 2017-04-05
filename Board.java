@@ -18,7 +18,7 @@ public class Board {
 						};		
 	}
 	
-	public void loadBoard(char a, int row, int col) {
+	public void loadBoard(int a, int row, int col) {
 		myBoard [row][col] = a;
 	}
 	
