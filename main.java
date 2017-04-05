@@ -27,23 +27,21 @@ public class main
 				//k is row
 				if(holdChar=='O')
 				{
-					myBoard.loadBoard(0, j, i);
+					myBoard.loadBoard(0,j,i);
 				}
 				else if(holdChar=='P')
 				{
 					System.out.println(j +" " + " " +i);
-					myBoard.loadBoard(1, j, i);
+					myBoard.loadBoard(1,j,i);
 				}
 				else
 				{
 					System.out.println("User has entered a value that was not P or O");
 				}
-			}
-			
-			
-			
-			
+			}	
 		}
+		
+		System.out.println("Next board");
 		
 		for(int k=0;k<6;k++) //board 2
 		{
