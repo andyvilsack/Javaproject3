@@ -27,12 +27,12 @@ public class main
 				//k is row
 				if(holdChar=='O')
 				{
-					myBoard.loadBoard(0,j,i);
+					myBoard.loadBoard(0,i,j);
 				}
 				else if(holdChar=='P')
 				{
 					System.out.println(j +" " + " " +i);
-					myBoard.loadBoard(1,j,i);
+					myBoard.loadBoard(1,i,j);
 				}
 				else
 				{
@@ -41,7 +41,7 @@ public class main
 			}	
 		}
 		
-		System.out.println("Next board");
+		System.out.println(myBoard);
 		
 		for(int k=0;k<6;k++) //board 2
 		{

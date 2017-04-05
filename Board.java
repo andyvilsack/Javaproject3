@@ -27,4 +27,14 @@ public class Board {
 		
 	}
 	
+	public String toString() {
+		String a = "";
+		for(int i=0;i<= 5;i++) {
+			for(int j=0;j<=5;j++) {
+				a += myBoard[i][j] + " "; 
+			}
+			a += "\n";
+		}
+		return a;
+	}
 }
