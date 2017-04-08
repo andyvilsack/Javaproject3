@@ -50,7 +50,54 @@ public class Board {
 			{
 				if(start.myBoard[i][j]!=2)
 				{
-					
+					try
+					{
+						//upright
+						if()
+						{
+							
+						}
+					}
+					catch(Exception e)
+					{
+						//right
+						if()
+						{
+							
+						}
+					}
+					try
+					{
+						//downright
+						if()
+						{
+							
+						}
+					}
+					catch(Exception e)
+					{
+						//downleft
+						if()
+						{
+							
+						}
+					}
+					try
+					{
+						//left
+						if()
+						{
+							
+						}
+					}
+					catch(Exception e)
+					{
+						//upleft
+						if()
+						{
+							
+						}
+					}
 				}
 			}
 		}
