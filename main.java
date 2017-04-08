@@ -9,12 +9,12 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		Board board1 = new Board();
+		Board myBoard = new Board();
 		Board finishedBoard = new Board();
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		char holdChar;
-		/*
+		
 		System.out.println("Please enter values for the starting positions:");
 		for(int i=0;i<6;i++) //col
 		{
@@ -69,16 +69,20 @@ public class Main
 			}
 		}
 		System.out.println(finishedBoard);
-		*/
-		board1.testBoard1();
-		finishedBoard.testBoard2();
-		if(finishedBoard.doBoard(board1)) {
+		
+		//board1.testBoard1();
+		//finishedBoard.testBoard2();
+		if(finishedBoard.doBoard(myBoard)) {
 			while(!finishedBoard.moveArray.empty()) {
 				System.out.println(finishedBoard.moveArray.pop());
 			}
-		};
+		}
+		else
+		{
+			System.out.println("Was Not Able To Complete");
+		}
 		
-		System.out.println(board1);
+		//System.out.println(board1);
 		
 		
 	}
