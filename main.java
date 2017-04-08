@@ -5,16 +5,16 @@
  */
 import java.util.Scanner;
 import java.util.Arrays;
-public class Main 
+public class main 
 {
 	public static void main(String[] args) 
 	{
-		Board myBoard = new Board();
+		Board board1 = new Board();
 		Board finishedBoard = new Board();
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		char holdChar;
-		
+		/*
 		System.out.println("Please enter values for the starting positions:");
 		for(int i=0;i<6;i++) //col
 		{
@@ -69,10 +69,12 @@ public class Main
 			}
 		}
 		System.out.println(finishedBoard);
+		*/
+		board1.testBoard1();
+		finishedBoard.testBoard2();
+		board1.doBoard(finishedBoard);
 		
-		myBoard.doBoard(finishedBoard);
-		
-		System.out.println(myBoard);
+		System.out.println(board1);
 		
 	}
 

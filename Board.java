@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Board {
 //	private int[][] myBoard;
-	private int[][] myBoard = new int[][]{ 
+	public int[][] myBoard = new int[][]{ 
 						  {0, 2, 2, 2, 2, 2},
 						  {0, 0, 2, 2, 2, 2},
 						  {0, 0, 0, 2, 2, 2},
@@ -25,6 +25,28 @@ public class Board {
 		myBoard[row][col] = a;
 //		System.out.println(myBoard[0][0]);
 		
+	}
+	public void testBoard1()
+	{
+		myBoard = new int[][]{ 
+			  {1, 2, 2, 2, 2, 2},
+			  {1, 1, 2, 2, 2, 2},
+			  {1, 1, 1, 2, 2, 2},
+			  {1, 0, 1, 1, 2, 2},
+			  {1, 1, 1, 1, 1, 2},
+			  {1, 1, 1, 1, 1, 1},
+			};
+	}
+	public void testBoard2()
+	{
+		myBoard= new int[][]{ 
+			  {0, 2, 2, 2, 2, 2},
+			  {0, 0, 2, 2, 2, 2},
+			  {0, 1, 0, 2, 2, 2},
+			  {0, 0, 0, 0, 2, 2},
+			  {0, 0, 1, 1, 1, 2},
+			  {0, 0, 0, 0, 0, 0},
+			};
 	}
 	
 	public String toString() {
