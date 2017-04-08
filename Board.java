@@ -37,4 +37,23 @@ public class Board {
 		}
 		return a;
 	}
+	
+	public Boolean doBoard(Board start, Board finish)
+	{
+		if(start == finish)
+		{
+			return true;
+		}
+		for (int i =0;i<36;i++)
+		{
+			for(int j=0; j<36;j++)
+			{
+				if(start.myBoard[i][j]!=2)
+				{
+					
+				}
+			}
+		}
+		return false;
+	}
 }
