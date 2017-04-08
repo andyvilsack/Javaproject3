@@ -38,69 +38,87 @@ public class Board {
 		return a;
 	}
 	
-	public Boolean doBoard(Board start, Board finish)
-	{
-		if(start == finish)
-		{
+	public Boolean doBoard(Board start, Board finish) {
+	  if(start == finish) {
 			return true;
 		}
-		for (int i =0;i<36;i++)
-		{
-			for(int j=0; j<36;j++)
-			{
-				if(start.myBoard[i][j]!=2)
-				{
-					try
-					{
-						//upright
-						if()
-						{
-							
+
+		for (int i =0;i<36;i++) {
+		  for(int j=0; j<36;j++) {
+			  if(start.myBoard[i][j]!=2) {
+
+					//---------------------------
+					
+				  try {
+					  if() { //upleft
+								
 						}
 					}
-					catch(Exception e)
-					{
-						//right
-						if()
-						{
-							
+					catch(Exception e) {
+							//upleft
+					}	
+	        
+	        //---------------------------
+
+					try {
+					  if() { //upright
+								
 						}
 					}
-					try
-					{
-						//downright
-						if()
-						{
-							
+					catch(Exception e) {
+							//upright
+					}
+
+					//---------------------------
+
+					try {
+					  if() { //right
+								
 						}
 					}
-					catch(Exception e)
-					{
-						//downleft
-						if()
-						{
-							
+					catch(Exception e) {
+							//right
+					}
+
+					//---------------------------
+					
+					try {
+					  if() { //downright
+								
 						}
 					}
-					try
-					{
-						//left
-						if()
-						{
-							
+					catch(Exception e) {
+							//downright
+					}
+
+					//---------------------------
+	    
+	        try {
+					  if() { //downleft
+								
 						}
 					}
-					catch(Exception e)
-					{
-						//upleft
-						if()
-						{
-							
+					catch(Exception e) {
+							//downleft
+					}
+
+					//---------------------------
+
+	        try {
+					  if() { //left
+								
 						}
 					}
-				}
-			}
-		}
-		return false;
+					catch(Exception e) {
+							//left
+					}
+
+					//---------------------------
+					
+					
+				} //if
+			} //j36
+		} //i36
+			return false;
 	}
 }
