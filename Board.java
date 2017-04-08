@@ -31,20 +31,20 @@ public class Board {
 		myBoard = new int[][]{ 
 			  {1, 2, 2, 2, 2, 2},
 			  {1, 1, 2, 2, 2, 2},
-			  {1, 1, 1, 2, 2, 2},
+			  {0, 1, 1, 2, 2, 2},
 			  {1, 0, 1, 1, 2, 2},
-			  {1, 1, 1, 1, 1, 2},
-			  {1, 1, 1, 1, 1, 1},
+			  {0, 0, 0, 0, 0, 2},
+			  {0, 0, 0, 0, 0, 0},
 			};
 	}
 	public void testBoard2()
 	{
 		myBoard= new int[][]{ 
 			  {0, 2, 2, 2, 2, 2},
-			  {0, 0, 2, 2, 2, 2},
-			  {0, 1, 0, 2, 2, 2},
-			  {0, 0, 0, 0, 2, 2},
-			  {0, 0, 1, 1, 1, 2},
+			  {1, 1, 2, 2, 2, 2},
+			  {0, 0, 0, 2, 2, 2},
+			  {0, 0, 0, 1, 2, 2},
+			  {0, 0, 0, 0, 0, 2},
 			  {0, 0, 0, 0, 0, 0},
 			};
 	}
@@ -61,7 +61,7 @@ public class Board {
 	}
 	
 	public Boolean doBoard(Board start) {
-	  if(this.myBoard == start.myBoard) {
+	  if(Arrays.deepEquals(this.myBoard, start.myBoard)) {
 			return true;
 		}
 
@@ -76,8 +76,16 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i-1][j-1] = 0; //jumpped peg
 							start.myBoard[i-2][j-2] = 1; //final position
-							System.out.println(start);
-							return this.doBoard(start);
+//							System.out.println(start);
+							if(!this.doBoard(start)){
+							start.myBoard[i][j] = 1; //start position
+							start.myBoard[i-1][j-1] = 1; //jumpped peg
+							start.myBoard[i-2][j-2] = 0; //final position
+							}
+							else {
+								return true;
+							}
+							
 						}
 					}
 					catch(Exception e) {
@@ -91,8 +99,15 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i-1][j] = 0; //jumpped peg
 							start.myBoard[i-2][j] = 1; //final position
-							System.out.println(start);
-							return this.doBoard(start);
+//							System.out.println(start);
+							if(!this.doBoard(start)){
+							start.myBoard[i][j] = 1; //start position
+							start.myBoard[i-1][j] = 1; //jumpped peg
+							start.myBoard[i-2][j] = 0; //final position
+							}
+							else {
+								return true;
+							}
 						}
 					}
 					catch(Exception e) {
@@ -106,8 +121,15 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i][j+1] = 0; //jumpped peg
 							start.myBoard[i][j+2] = 1; //final position
-							System.out.println(start);
-							return this.doBoard(start);
+//							System.out.println(start);
+							if(!this.doBoard(start)){
+							start.myBoard[i][j] = 1; //start position
+							start.myBoard[i][j+1] = 1; //jumpped peg
+							start.myBoard[i][j+2] = 0; //final position
+							}
+							else {
+								return true;
+							}
 						}
 					}
 					catch(Exception e) {
@@ -121,8 +143,15 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i+1][j+1] = 0; //jumpped peg
 							start.myBoard[i+2][j+2] = 1; //final position
-							System.out.println(start);
-							return this.doBoard(start);
+//							System.out.println(start);
+							if(!this.doBoard(start)){
+							start.myBoard[i][j] = 1; //start position
+							start.myBoard[i+1][j+1] = 1; //jumpped peg
+							start.myBoard[i+2][j+2] = 0; //final position
+							}
+							else {
+								return true;
+							}
 						}
 					}
 					catch(Exception e) {
@@ -136,8 +165,15 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i+1][j] = 0; //jumpped peg
 							start.myBoard[i+2][j] = 1; //final position
-							System.out.println(start);
-							return this.doBoard(start);
+//							System.out.println(start);
+							if(!this.doBoard(start)){
+							start.myBoard[i][j] = 1; //start position
+							start.myBoard[i+1][j] = 1; //jumpped peg
+							start.myBoard[i+2][j] = 0; //final position
+							}
+							else {
+								return true;
+							}
 						}
 					}
 					catch(Exception e) {
@@ -149,10 +185,17 @@ public class Board {
 	        try {
 					  if(start.myBoard[i][j] == 1 && start.myBoard[i][j-1] == 1 && start.myBoard[i][j-2] == 0) { //left
 								start.myBoard[i][j] = 0; //start position
-								start.myBoard[i][j-2] = 0; //jumpped peg
+								start.myBoard[i][j-1] = 0; //jumpped peg
 								start.myBoard[i][j-2] = 1; //final position
-								System.out.println(start);
-								return this.doBoard(start);
+//								System.out.println(start);
+								if(!this.doBoard(start)){
+								start.myBoard[i][j] = 1; //start position
+								start.myBoard[i][j-1] = 1; //jumpped peg
+								start.myBoard[i][j-2] = 0; //final position
+								}
+								else {
+									return true;
+								}
 						}
 					}
 					catch(Exception e) {
