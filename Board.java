@@ -50,8 +50,10 @@ public class Board {
 					//---------------------------
 					
 				  try {
-					  if() { //upleft
-								
+					  if(start.myBoard[i+1][j-1] == 1 && start.myBoard[i+2][j-2] == 0) { //upleft
+							start.myBoard[i][j] = 0; //start position
+							start.myBoard[i+1][j-1] = 0; //jumpped peg
+							start.myBoard[i+2][j-2] = 1; //final position
 						}
 					}
 					catch(Exception e) {
@@ -61,8 +63,10 @@ public class Board {
 	        //---------------------------
 
 					try {
-					  if() { //upright
-								
+						if(start.myBoard[i+1][j+1] == 1 && start.myBoard[i+2][j+2] == 0) { //upright
+							start.myBoard[i][j] = 0; //start position
+							start.myBoard[i+1][j+1] = 0; //jumpped peg
+							start.myBoard[i+2][j+2] = 1; //final position
 						}
 					}
 					catch(Exception e) {
@@ -72,8 +76,10 @@ public class Board {
 					//---------------------------
 
 					try {
-					  if() { //right
-								
+					  if(start.myBoard[i][j+1] == 1 && start.myBoard[i][j+2] == 0) { //right
+							start.myBoard[i][j] = 0; //start position
+							start.myBoard[i][j+1] = 0; //jumpped peg
+							start.myBoard[i][j+2] = 1; //final position
 						}
 					}
 					catch(Exception e) {
@@ -83,8 +89,10 @@ public class Board {
 					//---------------------------
 					
 					try {
-					  if() { //downright
-								
+					  if(start.myBoard[i-1][j+1] == 1 && start.myBoard[i-2][j+2] == 0) { //downright
+							start.myBoard[i][j] = 0; //start position
+							start.myBoard[i-1][j+1] = 0; //jumpped peg
+							start.myBoard[i-1][j+2] = 1; //final position
 						}
 					}
 					catch(Exception e) {
@@ -94,8 +102,10 @@ public class Board {
 					//---------------------------
 	    
 	        try {
-					  if() { //downleft
-								
+					  if(start.myBoard[i-1][j-1] == 1 && start.myBoard[i-2][j-2] == 0) { //downleft
+							start.myBoard[i][j] = 0; //start position
+							start.myBoard[i-1][j-1] = 0; //jumpped peg
+							start.myBoard[i-1][j-2] = 1; //final position
 						}
 					}
 					catch(Exception e) {
@@ -105,8 +115,10 @@ public class Board {
 					//---------------------------
 
 	        try {
-					  if() { //left
-								
+					  if(start.myBoard[i-1][j] == 1 && start.myBoard[i-2][j] == 0) { //left
+								start.myBoard[i][j] = 0; //start position
+								start.myBoard[i-1][j] = 0; //jumpped peg
+								start.myBoard[i-1][j] = 1; //final position
 						}
 					}
 					catch(Exception e) {
@@ -114,8 +126,6 @@ public class Board {
 					}
 
 					//---------------------------
-					
-					
 				} //if
 			} //j36
 		} //i36

@@ -5,7 +5,7 @@
  */
 import java.util.Scanner;
 import java.util.Arrays;
-public class main 
+public class Main 
 {
 	public static void main(String[] args) 
 	{
@@ -31,7 +31,7 @@ public class main
 				}
 				else if(holdChar=='P')
 				{
-					System.out.println(j +" " + " " +i);
+					//System.out.println(j +" " + " " +i);
 					myBoard.loadBoard(1,i,j);
 				}
 				else
