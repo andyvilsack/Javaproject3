@@ -5,7 +5,7 @@
  */
 import java.util.Scanner;
 import java.util.Arrays;
-public class main 
+public class Main 
 {
 	public static void main(String[] args) 
 	{
@@ -72,7 +72,7 @@ public class main
 		*/
 		board1.testBoard1();
 		finishedBoard.testBoard2();
-		board1.doBoard(finishedBoard);
+		finishedBoard.doBoard(board1);
 		
 		System.out.println(board1);
 		
