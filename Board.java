@@ -65,17 +65,18 @@ public class Board {
 			return true;
 		}
 
-		for (int i =0;i<6;i++) {
+		for (int i=0;i<6;i++) {
 		  for(int j=0; j<6;j++) {
 			  if(start.myBoard[i][j]!=2) {
 
 					//---------------------------
 					
 				  try {
-					  if(start.myBoard[i-1][j-1] == 1 && start.myBoard[i-2][j-2] == 0) { //upleft
+					  if(start.myBoard[i][j] == 1 && start.myBoard[i-1][j-1] == 1 && start.myBoard[i-2][j-2] == 0) { //upleft
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i-1][j-1] = 0; //jumpped peg
 							start.myBoard[i-2][j-2] = 1; //final position
+							System.out.println(start);
 							return this.doBoard(start);
 						}
 					}
@@ -86,10 +87,11 @@ public class Board {
 	        //---------------------------
 
 					try {
-						if(start.myBoard[i-1][j] == 1 && start.myBoard[i-2][j] == 0) { //up
+						if(start.myBoard[i][j] == 1 && start.myBoard[i-1][j] == 1 && start.myBoard[i-2][j] == 0) { //up
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i-1][j] = 0; //jumpped peg
 							start.myBoard[i-2][j] = 1; //final position
+							System.out.println(start);
 							return this.doBoard(start);
 						}
 					}
@@ -100,10 +102,11 @@ public class Board {
 					//---------------------------
 
 					try {
-					  if(start.myBoard[i][j+1] == 1 && start.myBoard[i][j+2] == 0) { //right
+					  if(start.myBoard[i][j] == 1 && start.myBoard[i][j+1] == 1 && start.myBoard[i][j+2] == 0) { //right
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i][j+1] = 0; //jumpped peg
 							start.myBoard[i][j+2] = 1; //final position
+							System.out.println(start);
 							return this.doBoard(start);
 						}
 					}
@@ -114,10 +117,11 @@ public class Board {
 					//---------------------------
 					
 					try {
-					  if(start.myBoard[i+1][j+1] == 1 && start.myBoard[i+2][j+2] == 0) { //downright
+					  if(start.myBoard[i][j] == 1 && start.myBoard[i+1][j+1] == 1 && start.myBoard[i+2][j+2] == 0) { //downright
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i+1][j+1] = 0; //jumpped peg
 							start.myBoard[i+2][j+2] = 1; //final position
+							System.out.println(start);
 							return this.doBoard(start);
 						}
 					}
@@ -128,7 +132,7 @@ public class Board {
 					//---------------------------
 	    
 	        try {
-					  if(start.myBoard[i+1][j] == 1 && start.myBoard[i+2][j] == 0) { //downleft
+					  if(start.myBoard[i][j] == 1 && start.myBoard[i+1][j] == 1 && start.myBoard[i+2][j] == 0) { //downleft
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i+1][j] = 0; //jumpped peg
 							start.myBoard[i+2][j] = 1; //final position
@@ -143,10 +147,11 @@ public class Board {
 					//---------------------------
 
 	        try {
-					  if(start.myBoard[i][j-1] == 1 && start.myBoard[i][j-2] == 0) { //left
+					  if(start.myBoard[i][j] == 1 && start.myBoard[i][j-1] == 1 && start.myBoard[i][j-2] == 0) { //left
 								start.myBoard[i][j] = 0; //start position
 								start.myBoard[i][j-2] = 0; //jumpped peg
 								start.myBoard[i][j-2] = 1; //final position
+								System.out.println(start);
 								return this.doBoard(start);
 						}
 					}
