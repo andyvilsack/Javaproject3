@@ -54,12 +54,12 @@ public class main
 				//k is row
 				if(holdChar=='O')
 				{
-					finishedBoard.loadBoard(0, l, k);
+					finishedBoard.loadBoard(0, k, l);
 				}
 				else if(holdChar=='P')
 				{
-					System.out.println(l +" " + " " +k);
-					finishedBoard.loadBoard(1, l, k);
+					//System.out.println(l +" " + " " +k);
+					finishedBoard.loadBoard(1, k, l);
 				}
 				else
 				{
