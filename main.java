@@ -67,7 +67,7 @@ public class main
 				}
 			}
 		}
-		System.out.println(myBoard);
+		System.out.println(finishedBoard);
 	}
 
 }
