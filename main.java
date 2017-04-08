@@ -7,10 +7,10 @@ import java.util.Scanner;
 import java.util.Arrays;
 public class main 
 {
-
 	public static void main(String[] args) 
 	{
 		Board myBoard = new Board();
+		Board finishedBoard = new Board();
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		char holdChar;
@@ -23,8 +23,8 @@ public class main
 			for(int j=0;j<input.length();j++) //row
 			{
 				holdChar = input.charAt(j);
-				//i is col
-				//k is row
+				//j is col
+				//i is row
 				if(holdChar=='O')
 				{
 					myBoard.loadBoard(0,i,j);
@@ -47,7 +47,27 @@ public class main
 		{
 			System.out.println("Enter for Line "+(k+1));
 			input = scanner.nextLine();
+			for(int l=0;l<input.length();l++)
+			{
+				holdChar = input.charAt(l);
+				//l is col
+				//k is row
+				if(holdChar=='O')
+				{
+					finishedBoard.loadBoard(0, l, k);
+				}
+				else if(holdChar=='P')
+				{
+					System.out.println(l +" " + " " +k);
+					finishedBoard.loadBoard(1, l, k);
+				}
+				else
+				{
+					System.out.println("User has entered a value that was not P or O");
+				}
+			}
 		}
+		System.out.println(myBoard);
 	}
 
 }

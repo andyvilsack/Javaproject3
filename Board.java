@@ -20,7 +20,7 @@ public class Board {
 	}
 	
 	public void loadBoard(int a, int row, int col) {
-		System.out.println("a:" + a);
+//		System.out.println("a:" + a);
 //		System.out.println(myBoard[0][0]);
 		myBoard[row][col] = a;
 //		System.out.println(myBoard[0][0]);
