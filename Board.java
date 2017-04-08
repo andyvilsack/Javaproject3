@@ -1,8 +1,9 @@
 import java.util.Arrays;
-import java.util.*;
+import java.util.Stack;
 
 public class Board {
 //	private int[][] myBoard;
+	public Stack<String> moveArray = new Stack<String>();
 	public int[][] myBoard = new int[][]{ 
 						  {0, 2, 2, 2, 2, 2},
 						  {0, 0, 2, 2, 2, 2},
@@ -32,18 +33,18 @@ public class Board {
 			  {1, 2, 2, 2, 2, 2},
 			  {1, 1, 2, 2, 2, 2},
 			  {0, 1, 1, 2, 2, 2},
-			  {1, 0, 1, 1, 2, 2},
-			  {0, 0, 0, 0, 0, 2},
-			  {0, 0, 0, 0, 0, 0},
+			  {1, 1, 1, 1, 2, 2},
+			  {1, 1, 1, 1, 1, 2},
+			  {1, 1, 1, 1, 1, 1},
 			};
 	}
 	public void testBoard2()
 	{
 		myBoard= new int[][]{ 
 			  {0, 2, 2, 2, 2, 2},
-			  {1, 1, 2, 2, 2, 2},
+			  {0, 0, 2, 2, 2, 2},
 			  {0, 0, 0, 2, 2, 2},
-			  {0, 0, 0, 1, 2, 2},
+			  {0, 0, 0, 0, 2, 2},
 			  {0, 0, 0, 0, 0, 2},
 			  {0, 0, 0, 0, 0, 0},
 			};
@@ -83,6 +84,7 @@ public class Board {
 							start.myBoard[i-2][j-2] = 0; //final position
 							}
 							else {
+								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i-2) + "," + (j-2) + ")");
 								return true;
 							}
 							
@@ -106,6 +108,7 @@ public class Board {
 							start.myBoard[i-2][j] = 0; //final position
 							}
 							else {
+								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i-2) + "," + (j) + ")");
 								return true;
 							}
 						}
@@ -128,6 +131,7 @@ public class Board {
 							start.myBoard[i][j+2] = 0; //final position
 							}
 							else {
+								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i) + "," + (j+2) + ")");
 								return true;
 							}
 						}
@@ -150,6 +154,7 @@ public class Board {
 							start.myBoard[i+2][j+2] = 0; //final position
 							}
 							else {
+								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i+2) + "," + (j+2) + ")");
 								return true;
 							}
 						}
@@ -172,6 +177,7 @@ public class Board {
 							start.myBoard[i+2][j] = 0; //final position
 							}
 							else {
+								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i+2) + "," + (j) + ")");
 								return true;
 							}
 						}
@@ -194,6 +200,7 @@ public class Board {
 								start.myBoard[i][j-2] = 0; //final position
 								}
 								else {
+									moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i) + "," + (j-2) + ")");
 									return true;
 								}
 						}

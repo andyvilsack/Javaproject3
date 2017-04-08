@@ -72,9 +72,14 @@ public class Main
 		*/
 		board1.testBoard1();
 		finishedBoard.testBoard2();
-		finishedBoard.doBoard(board1);
+		if(finishedBoard.doBoard(board1)) {
+			while(!finishedBoard.moveArray.empty()) {
+				System.out.println(finishedBoard.moveArray.pop());
+			}
+		};
 		
 		System.out.println(board1);
+		
 		
 	}
 
