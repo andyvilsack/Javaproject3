@@ -14,6 +14,7 @@ public class Main
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		char holdChar;
+		
 		System.out.println("Please enter values for the starting positions:");
 		for(int i=0;i<6;i++) //col
 		{
