@@ -68,6 +68,11 @@ public class Main
 			}
 		}
 		System.out.println(finishedBoard);
+		
+		myBoard.doBoard(finishedBoard);
+		
+		System.out.println(myBoard);
+		
 	}
 
 }
