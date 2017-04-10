@@ -62,13 +62,13 @@ public class Board {
 	}
 	
 	public Boolean doBoard(Board start) {
-	  if(Arrays.deepEquals(this.myBoard, start.myBoard)) {
+	  if(Arrays.deepEquals(this.myBoard, start.myBoard)) { //if the boards are the same, you're done
 			return true;
 		}
 
 		for (int i=0;i<6;i++) {
 		  for(int j=0; j<6;j++) {
-			  if(start.myBoard[i][j]!=2) {
+			  if(start.myBoard[i][j]!=2) { //if it's not off the board
 
 					//---------------------------
 					
@@ -207,9 +207,12 @@ public class Board {
 					catch(Exception e) {
 							//left
 					}
+					
+				//---------------------------
+
 				} //if
 			} //j36
 		} //i36
-			return false;
+		return false;
 	}
 }
