@@ -32,7 +32,6 @@ public class Main
 				}
 				else if(holdChar=='P')
 				{
-					//System.out.println(j +" " + " " +i);
 					myBoard.loadBoard(1,i,j);
 				}
 				else
@@ -42,7 +41,8 @@ public class Main
 			}	
 		}
 		
-		System.out.println(myBoard);
+//		System.out.println("DEBUG:");
+//		System.out.println(myBoard);
 		
 		for(int k=0;k<6;k++) //board 2
 		{
@@ -59,7 +59,6 @@ public class Main
 				}
 				else if(holdChar=='P')
 				{
-					//System.out.println(l +" " + " " +k);
 					finishedBoard.loadBoard(1, k, l);
 				}
 				else
@@ -68,12 +67,15 @@ public class Main
 				}
 			}
 		}
-		System.out.println(finishedBoard);
+		
+//		System.out.println("DEBUG:");
+//		System.out.println(finishedBoard);
 		
 		//board1.testBoard1();
 		//finishedBoard.testBoard2();
+		
 		if(finishedBoard.doBoard(myBoard)) {
-			while(!finishedBoard.moveArray.empty()) {
+			while(!finishedBoard.moveArray.empty()) { //print all moves it took to solve board
 				System.out.println(finishedBoard.moveArray.pop());
 			}
 		}
