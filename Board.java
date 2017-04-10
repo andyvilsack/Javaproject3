@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class Board {
 //	private int[][] myBoard;
-	public Stack<String> moveArray = new Stack<String>();
+	public Stack<String> moveArray = new Stack<String>(); //used to hold list of moves
 	public int[][] myBoard = new int[][]{ 
 						  {0, 2, 2, 2, 2, 2},
 						  {0, 0, 2, 2, 2, 2},
@@ -20,7 +20,7 @@ public class Board {
 			
 	}
 	
-	public void loadBoard(int a, int row, int col) {
+	public void loadBoard(int a, int row, int col) { //puts user input in matrix
 //		System.out.println("a:" + a);
 //		System.out.println(myBoard[0][0]);
 		myBoard[row][col] = a;
@@ -77,17 +77,16 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i-1][j-1] = 0; //jumpped peg
 							start.myBoard[i-2][j-2] = 1; //final position
-//							System.out.println(start);
-							if(!this.doBoard(start)){
-							start.myBoard[i][j] = 1; //start position
-							start.myBoard[i-1][j-1] = 1; //jumpped peg
-							start.myBoard[i-2][j-2] = 0; //final position
+
+							if(!this.doBoard(start)){ //it failed, reset the pegs 
+								start.myBoard[i][j] = 1; //start position
+								start.myBoard[i-1][j-1] = 1; //jumpped peg
+								start.myBoard[i-2][j-2] = 0; //final position
 							}
-							else {
+							else { //it worked, add the moves to the stack
 								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i-2) + "," + (j-2) + ")");
 								return true;
 							}
-							
 						}
 					}
 					catch(Exception e) {
@@ -101,11 +100,11 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i-1][j] = 0; //jumpped peg
 							start.myBoard[i-2][j] = 1; //final position
-//							System.out.println(start);
+
 							if(!this.doBoard(start)){
-							start.myBoard[i][j] = 1; //start position
-							start.myBoard[i-1][j] = 1; //jumpped peg
-							start.myBoard[i-2][j] = 0; //final position
+								start.myBoard[i][j] = 1; //start position
+								start.myBoard[i-1][j] = 1; //jumpped peg
+								start.myBoard[i-2][j] = 0; //final position
 							}
 							else {
 								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i-2) + "," + (j) + ")");
@@ -124,11 +123,11 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i][j+1] = 0; //jumpped peg
 							start.myBoard[i][j+2] = 1; //final position
-//							System.out.println(start);
+							
 							if(!this.doBoard(start)){
-							start.myBoard[i][j] = 1; //start position
-							start.myBoard[i][j+1] = 1; //jumpped peg
-							start.myBoard[i][j+2] = 0; //final position
+								start.myBoard[i][j] = 1; //start position
+								start.myBoard[i][j+1] = 1; //jumpped peg
+								start.myBoard[i][j+2] = 0; //final position
 							}
 							else {
 								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i) + "," + (j+2) + ")");
@@ -147,11 +146,11 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i+1][j] = 0; //jumpped peg
 							start.myBoard[i+2][j] = 1; //final position
-//							System.out.println(start);
+
 							if(!this.doBoard(start)){
-							start.myBoard[i][j] = 1; //start position
-							start.myBoard[i+1][j] = 1; //jumpped peg
-							start.myBoard[i+2][j] = 0; //final position
+								start.myBoard[i][j] = 1; //start position
+								start.myBoard[i+1][j] = 1; //jumpped peg
+								start.myBoard[i+2][j] = 0; //final position
 							}
 							else {
 								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i+2) + "," + (j+2) + ")");
@@ -170,11 +169,11 @@ public class Board {
 							start.myBoard[i][j] = 0; //start position
 							start.myBoard[i+1][j+1] = 0; //jumpped peg
 							start.myBoard[i+2][j+2] = 1; //final position
-//							System.out.println(start);
+
 							if(!this.doBoard(start)){
-							start.myBoard[i][j] = 1; //start position
-							start.myBoard[i+1][j+1] = 1; //jumpped peg
-							start.myBoard[i+2][j+2] = 0; //final position
+								start.myBoard[i][j] = 1; //start position
+								start.myBoard[i+1][j+1] = 1; //jumpped peg
+								start.myBoard[i+2][j+2] = 0; //final position
 							}
 							else {
 								moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i+2) + "," + (j) + ")");
@@ -193,11 +192,11 @@ public class Board {
 								start.myBoard[i][j] = 0; //start position
 								start.myBoard[i][j-1] = 0; //jumpped peg
 								start.myBoard[i][j-2] = 1; //final position
-//								System.out.println(start);
+
 								if(!this.doBoard(start)){
-								start.myBoard[i][j] = 1; //start position
-								start.myBoard[i][j-1] = 1; //jumpped peg
-								start.myBoard[i][j-2] = 0; //final position
+									start.myBoard[i][j] = 1; //start position
+									start.myBoard[i][j-1] = 1; //jumpped peg
+									start.myBoard[i][j-2] = 0; //final position
 								}
 								else {
 									moveArray.push("SRC: (" + i + "," + j + ")" + " DEST: (" + (i) + "," + (j-2) + ")");
