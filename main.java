@@ -5,7 +5,7 @@
  */
 import java.util.Scanner;
 import java.util.Arrays;
-public class Main 
+public class main 
 {
 	public static void main(String[] args) 
 	{
@@ -18,7 +18,7 @@ public class Main
 		System.out.println("Please enter values for the starting positions:");
 		for(int i=0;i<6;i++) //col
 		{
-			System.out.println("Enter for line "+(i+1));
+			//System.out.println("Enter for line "+(i+1));
 			input = scanner.nextLine();
 			
 			for(int j=0;j<input.length();j++) //row
@@ -43,10 +43,10 @@ public class Main
 		
 //		System.out.println("DEBUG:");
 //		System.out.println(myBoard);
-		
+		System.out.println("Please enter values for the ending postitions:");
 		for(int k=0;k<6;k++) //board 2
 		{
-			System.out.println("Enter for Line "+(k+1));
+//			System.out.println("Enter for Line "+(k+1));
 			input = scanner.nextLine();
 			for(int l=0;l<input.length();l++)
 			{
@@ -68,8 +68,8 @@ public class Main
 			}
 		}
 		
-//		System.out.println("DEBUG:");
-//		System.out.println(finishedBoard);
+		//System.out.println("DEBUG:");
+		//System.out.println(finishedBoard);
 		
 		//board1.testBoard1();
 		//finishedBoard.testBoard2();
