@@ -89,7 +89,7 @@ public class Board {
 							}
 						}
 					}
-					catch(Exception e) {
+					catch(Exception e) { //if the move tries to place the peg off our board, ignore it
 							//upleft
 					}	
 	        
