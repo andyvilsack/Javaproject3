@@ -14,7 +14,6 @@ public class main
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		char holdChar;
-		
 		System.out.println("Please enter values for the starting positions:");
 		for(int i=0;i<6;i++) //col
 		{
@@ -43,7 +42,6 @@ public class main
 		
 //		System.out.println("DEBUG:");
 //		System.out.println(myBoard);
-		System.out.println("Please enter values for the ending postitions:");
 		for(int k=0;k<6;k++) //board 2
 		{
 //			System.out.println("Enter for Line "+(k+1));
@@ -67,6 +65,7 @@ public class main
 				}
 			}
 		}
+		
 		
 		//System.out.println("DEBUG:");
 		//System.out.println(finishedBoard);
