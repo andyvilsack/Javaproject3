@@ -65,7 +65,34 @@ public class Board {
 	  if(Arrays.deepEquals(this.myBoard, start.myBoard)) { //if the boards are the same, you're done
 			return true;
 		}
-
+	  int startCount = 0;
+	  int finishCount = 0;
+	  
+	  
+	  
+	  //"Short out" the checks so that doesnt waste steps 
+	  for(int k=0;k<6;k++)
+	  {
+		  for (int l=0;l<6;l++)
+		  {
+			  if(start.myBoard[k][l] == 1)
+			  {
+				  startCount++;
+			  }
+			  if(this.myBoard[k][l] == 1)
+			  {
+				  finishCount++;
+			  }
+		  }
+	  }
+	  if (finishCount>startCount)
+	  {
+		  return false;
+	  }
+	  
+	  
+	  
+	  
 		for (int i=0;i<6;i++) {
 		  for(int j=0; j<6;j++) {
 			  if(start.myBoard[i][j]!=2) { //if it's not off the board
